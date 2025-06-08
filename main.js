@@ -13,11 +13,14 @@ export default async ({ req, res, log, error }) => {
         return res.json({}, 200, headers); // Changé de res.empty() à res.json()
     }
 
+    const requestData = req.body || {};
+    const prompt = requestData.prompt || "";
+
     const result = await axios.post(
         'http://192.168.1.58:11434/api/generate',
         {
             "model": "sushruth/solar-uncensored:latest",
-            "prompt": "traduis en français : i m alive",
+            "prompt": prompt,
             "stream": false
         },
         {
