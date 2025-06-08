@@ -20,7 +20,7 @@ export default async ({ req, res, log, error }) => {
         'http://192.168.1.58:11434/api/generate',
         {
             "model": "sushruth/solar-uncensored:latest",
-            "prompt": `<context>Tu dois toujours répondre en français</context> ${prompt}`,
+            "prompt": `Traite la demande qui va suivre en français, et répond moi en français : ${prompt}`,
             "stream": false
         },
         {
