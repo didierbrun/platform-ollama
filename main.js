@@ -33,8 +33,6 @@ export default async ({ req, res, log, error }) => {
         }
     )
 
-    console.log(result);
-
     return res.json({
         success: true,
         data: result.data
