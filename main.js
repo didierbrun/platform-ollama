@@ -16,6 +16,8 @@ export default async ({ req, res, log, error }) => {
     const requestData = req.body || {};
     const prompt = requestData.prompt || "";
 
+    console.log("ICI....")
+
     const result = await axios.post(
         'http://192.168.1.58:11434/api/generate',
         {
