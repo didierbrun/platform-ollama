@@ -20,6 +20,8 @@ export default async ({ req, res, log, error }) => {
         'http://192.168.1.58:11434/api/generate',
         {
             "model": "sushruth/solar-uncensored:latest",
+            //"model": "llama2-uncensored:7b",
+            //"model": "llama2-uncensored:70b",
             "prompt": `Traite la demande qui va suivre en français, et répond moi en français : ${prompt}`,
             "stream": false
         },
